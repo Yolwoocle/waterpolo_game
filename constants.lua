@@ -1,0 +1,3 @@
+BLOCK_WIDTH = 32
+
+COL_WHITE = {1, 1, 1, 1}
