@@ -43,6 +43,9 @@ function Collision.filter(item, other)
 
 	if other.is_solid then
 		type = "slide"
+		if item.is_boucy then
+			type = "bounce"
+		end
 	end
 
 	return type

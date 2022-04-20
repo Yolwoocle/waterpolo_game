@@ -65,6 +65,14 @@ function TileMap:is_valid_tile(x,y)
 	return x >= 0 and x < self.width and y >= 0 and y < self.height
 end
 
-function TileMap:
+function TileMap:init_arena()
+	for i=0,self.width-1 do
+		for j=0,self.height-1 do
+			if i == 0 or i == self.width-1 or j == 0 or j == self.height-1 then
+				self:set_solid(i,j,true)
+			end
+		end
+	end
+end
 
 return TileMap

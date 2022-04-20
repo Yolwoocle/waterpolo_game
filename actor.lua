@@ -12,6 +12,7 @@ end
 
 function Actor:apply_movement(dt)
 	-- Apply position
+	self.cols = {}
 	local goal_x = self.x + self.dx * dt
 	local goal_y = self.y + self.dy * dt
 

@@ -12,7 +12,7 @@ function Game:init()
 
 	self.map = TileMap:new(24, 18)
 	self.actors = {}
-	self:new_actor(Player)
+	self:new_actor(Player, 64,64)
 	local ts = self.map.tile_size
 	self:new_actor(Ball, (self.map.width*ts)/2, (self.map.height*ts)/2)
 end
@@ -30,6 +30,7 @@ function Game:draw()
 		actor:draw()
 	end
 
+	-- DEBUGGING
 	local items, len = collision.world:getItems()
 	for i,it in pairs(items) do
 		local x,y,w,h = collision.world:getRect(it)
